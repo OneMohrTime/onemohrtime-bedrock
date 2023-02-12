@@ -1,0 +1,19 @@
+{
+  "name": "onemohrtime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OneMohrTime/onemohrtime-theme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OneMohrTime/onemohrtime-theme/issues"
+  },
+  "homepage": "https://github.com/OneMohrTime/onemohrtime-theme#readme"
+}
