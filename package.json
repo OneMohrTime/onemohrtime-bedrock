@@ -4,16 +4,51 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "build": "npm run production",
+    "prod": "npm run production",
+    "production": "mix --production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OneMohrTime/onemohrtime-theme.git"
   },
-  "author": "",
+  "author": {
+    "name": "Derek Mohr",
+    "email": "derekmohrdesign@gmail.com",
+    "url": "https://onemohrti.me/"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/OneMohrTime/onemohrtime-theme/issues"
   },
-  "homepage": "https://github.com/OneMohrTime/onemohrtime-theme#readme"
+  "homepage": "https://github.com/OneMohrTime/onemohrtime-theme#readme",
+  "engines": {
+    "node": "18"
+  },
+  "browserslist": [
+    "last 5 versions",
+    "> 1%",
+    "IE 10-11"
+  ],
+  "devDependencies": {
+    "@fancyapps/ui": "^5.0.15",
+    "autoprefixer": "^10.4.14",
+    "bourbon": "^7.3.0",
+    "browser-sync": "^2.29.1",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "include-media": "^2.0.0",
+    "laravel-mix": "^6.0.49",
+    "modujs": "^1.4.2",
+    "modularload": "^1.2.8",
+    "postcss": "^8.4.21",
+    "sass": "^1.61.0",
+    "sass-loader": "^12.6.0",
+    "webpack": "^5.78.0"
+  }
 }

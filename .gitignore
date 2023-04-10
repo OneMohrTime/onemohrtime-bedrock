@@ -31,3 +31,12 @@ wp-cli.local.yml
 ehthumbs.db
 Thumbs.db
 ._*
+
+# NPM / Composer
+/node_modules
+/vendor
+/public
+.env
+.budfiles
+npm-debug.log
+yarn-error.log
