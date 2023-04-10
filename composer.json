@@ -61,6 +61,7 @@
     "wpackagist-plugin/contact-form-7": "~5.6.3",
     "wpackagist-plugin/regenerate-thumbnails": "~3.1.5",
     "wpackagist-plugin/simple-custom-post-order": "~2.5.6",
+    "wpackagist-plugin/wordpress-importer": "~0.8.0",
     "wpackagist-plugin/wordpress-seo": "~19.3.0",
     "wpackagist-plugin/wp-super-cache": "~1.7.9",
     "wpackagist-theme/twentytwentythree": "^1.0"
