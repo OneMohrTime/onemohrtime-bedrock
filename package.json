@@ -14,8 +14,13 @@
     "npm": ">=9.5"
   },
   "scripts": {
+    "dev": "node --experimental-json-modules --no-warnings build/watch.js",
+    "development": "node --experimental-json-modules --no-warnings build/watch.js",
     "start": "node --experimental-json-modules --no-warnings build/watch.js",
-    "build": "node --experimental-json-modules --no-warnings build/build.js"
+    "watch": "node --experimental-json-modules --no-warnings build/watch.js",
+    "build": "node --experimental-json-modules --no-warnings build/build.js",
+    "prod": "node --experimental-json-modules --no-warnings build/build.js",
+    "production": "node --experimental-json-modules --no-warnings build/build.js"
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.20",
