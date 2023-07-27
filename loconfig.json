@@ -1,72 +1,73 @@
 {
-    "paths": {
-        "url": "onemohrtime.ddev.site",
-        "src": "./web/app/themes/onemohrtime/src",
-        "dest": "./web/app/themes/onemohrtime/assets",
-        "images": {
-            "src": "./web/app/themes/onemohrtime/src/images"
-        },
-        "styles": {
-            "src": "./web/app/themes/onemohrtime/src/styles",
-            "dest": "./web/app/themes/onemohrtime/assets/styles"
-        },
-        "scripts": {
-            "src": "./web/app/themes/onemohrtime/src/scripts",
-            "dest": "./web/app/themes/onemohrtime/assets/scripts"
-        },
-        "svgs": {
-            "src": "./web/app/themes/onemohrtime/src/images/sprite",
-            "dest": "./web/app/themes/onemohrtime/assets/images"
-        },
-        "views": {
-            "src": "./web/app/themes/onemohrtime/"
-        }
+  "paths": {
+    "url": "onemohrti.ddev.site",
+    "src": "./wp-content/themes/onemohrtime/src",
+    "dest": "./wp-content/themes/onemohrtime/assets",
+    "images": {
+      "src": "./wp-content/themes/onemohrtime/src/images"
     },
-    "tasks": {
-        "concats": [
-            {
-                "includes": [
-                    "{% paths.scripts.src %}/vendors/*.js"
-                ],
-                "outfile": "{% paths.scripts.dest %}/vendors.js"
-            }
-        ],
-        "scripts": [
-            {
-                "includes": [
-                    "{% paths.scripts.src %}/app.js"
-                ],
-                "outfile": "{% paths.scripts.dest %}/app.js"
-            }
-        ],
-        "styles": [
-            {
-                "infile": "{% paths.styles.src %}/critical.scss",
-                "outfile": "{% paths.styles.dest %}/critical.css"
-            },
-            {
-                "infile": "{% paths.styles.src %}/app.scss",
-                "outfile": "{% paths.styles.dest %}/main.css"
-            }
-        ],
-        "svgs": [
-            {
-                "includes": [
-                    "{% paths.svgs.src %}/*.svg"
-                ],
-                "outfile": "{% paths.svgs.dest %}/sprite.svg"
-            }
-        ],
-        "purgeCSS": {
-            "content": [
-                "./www/**/*.html",
-                "./assets/scripts/**/*"
-            ]
-        },
-        "versions": [
-            {
-                "outfile": "./assets.json"
-            }
-        ]
+    "styles": {
+      "src": "./wp-content/themes/onemohrtime/src/styles",
+      "dest": "./wp-content/themes/onemohrtime/assets/styles"
+    },
+    "scripts": {
+      "src": "./wp-content/themes/onemohrtime/src/scripts",
+      "dest": "./wp-content/themes/onemohrtime/assets/scripts"
+    },
+    "svgs": {
+      "src": "./wp-content/themes/onemohrtime/src/images/sprite",
+      "dest": "./wp-content/themes/onemohrtime/assets/images"
+    },
+    "views": {
+      "src": "./wp-content/themes/onemohrtime/templates"
     }
+  },
+  "tasks": {
+    "concats": [
+      {
+        "includes": [
+          "{% paths.scripts.src %}/vendors/*.js"
+        ],
+        "outfile": "{% paths.scripts.dest %}/vendors.js"
+      }
+    ],
+    "scripts": [
+      {
+        "includes": [
+          "{% paths.scripts.src %}/app.js"
+        ],
+        "outfile": "{% paths.scripts.dest %}/app.js"
+      }
+    ],
+    "styles": [
+      {
+        "infile": "{% paths.styles.src %}/critical.scss",
+        "outfile": "{% paths.styles.dest %}/critical.css"
+      },
+      {
+        "infile": "{% paths.styles.src %}/app.scss",
+        "outfile": "{% paths.styles.dest %}/main.css"
+      }
+    ],
+    "svgs": [
+      {
+        "includes": [
+          "{% paths.svgs.src %}/*.svg"
+        ],
+        "outfile": "{% paths.svgs.dest %}/sprite.svg"
+      }
+    ],
+    "purgeCSS": {
+      "content": [
+        "./wp-content/themes/onemohrtime/templates/**/*.twig",
+        "./wp-content/themes/onemohrtime/assets/styles/**/*",
+        "./wp-content/themes/onemohrtime/assets/scripts/**/*."
+      ]
+    },
+    "versions": [
+      {
+        "outfile": "./wp-content/themes/onemohrtime/assets.json"
+      }
+    ]
+  }
 }
