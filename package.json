@@ -44,7 +44,6 @@
     "jquery": "^3.5.1",
     "modujs": "^1.4.2",
     "modularload": "^1.2.8",
-    "rellax": "^1.12.1",
     "swiper": "^10.0.4"
   }
 }
