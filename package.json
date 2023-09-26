@@ -36,14 +36,16 @@
     "production": "mix --production"
   },
   "dependencies": {
-    "@fancyapps/fancybox": "^3.5.7",
+    "@fancyapps/ui": "^5.0.20",
     "@studio-freight/lenis": "^1.0.19",
-    "bourbon": "^6.0.0",
+    "bourbon": "^7.3.0",
+    "css-reset-and-normalize": "^2.3.6",
     "gsap": "^3.12.2",
-    "include-media": "^1.4.10",
+    "include-media": "^2.0.0",
     "jquery": "^3.5.1",
     "modujs": "^1.4.2",
     "modularload": "^1.2.8",
-    "swiper": "^10.0.4"
+    "prismjs": "^1.29.0",
+    "swiper": "^10.3.0"
   }
 }
