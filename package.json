@@ -37,7 +37,8 @@
     "modularload": "^1.2.8",
     "modularscroll": "^1.0.7",
     "prismjs": "^1.29.0",
-    "swiper": "^10.3.1"
+    "swiper": "^10.3.1",
+    "tippy.js": "^6.3.7"
   },
   "devDependencies": {
     "browser-sync": "^2.27.9",
