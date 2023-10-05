@@ -1,7 +1,7 @@
 {
   "name": "onemohrtime",
   "description": "Wordpress theme for my personal design portfolio.",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "author": {
     "name": "Derek Mohr",
     "email": "derek@onemohrti.me",
@@ -13,18 +13,6 @@
   },
   "license": "MIT",
   "main": "index.php",
-  "devDependencies": {
-    "browser-sync": "^2.26.12",
-    "browser-sync-webpack-plugin": "^2.0.1",
-    "cross-env": "^7.0.3",
-    "laravel-mix": "^6.0.0",
-    "sass": "^1.27.0",
-    "sass-loader": "^10.0.3",
-    "vue-template-compiler": "^2.6.12"
-  },
-  "engines": {
-    "node": ">=17"
-  },
   "scripts": {
     "dev": "npm run development",
     "development": "mix",
@@ -35,17 +23,30 @@
     "prod": "npm run production",
     "production": "mix --production"
   },
+  "browserslist": [
+    "last 5 versions",
+    "> 1%",
+    "IE 10-11"
+  ],
   "dependencies": {
-    "@fancyapps/ui": "^5.0.20",
-    "@studio-freight/lenis": "^1.0.19",
+    "@fancyapps/ui": "^5.0.23",
     "bourbon": "^7.3.0",
     "css-reset-and-normalize": "^2.3.6",
-    "gsap": "^3.12.2",
-    "include-media": "^2.0.0",
-    "jquery": "^3.5.1",
+    "include-media": "^1.4.10",
     "modujs": "^1.4.2",
     "modularload": "^1.2.8",
+    "modularscroll": "^1.0.7",
     "prismjs": "^1.29.0",
-    "swiper": "^10.3.0"
+    "swiper": "^10.3.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.9",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "laravel-mix": "^6.0.43",
+    "laravel-mix-imagemin": "^1.0.3",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "webpack-cli": "^5.1.4"
   }
 }

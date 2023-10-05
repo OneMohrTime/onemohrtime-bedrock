@@ -1,3 +1,20 @@
+let mix = require('laravel-mix');
+
+require('laravel-mix-imagemin');
+
+let PATHS = {
+    node: './node_modules',
+    src: './wp-content/themes/onemohrtime/src',
+    dist: './wp-content/themes/onemohrtime/assets',
+    proxy: 'https://onemohrti.ddev.site'
+};
+
+mix.webpackConfig({
+    resolve: {
+        extensions: ['.js', '.jsx'],
+    },
+});
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -9,63 +26,43 @@
  |
  */
 
-const mix = require('laravel-mix');
-// const dotenv = require('dotenv');
+mix
+    .sourceMaps(false, 'source-map')
+    // .imagemin(
+    //     'images/**.*',
+    //     {
+    //         context: 'src',
+    //     },
+    //     {
+    //         optipng: {
+    //             optimizationLevel: 5
+    //         },
+    //         jpegtran: null,
+    //         plugins: [
+    //             require('imagemin-mozjpeg')({
+    //                 quality: 100,
+    //                 progressive: true,
+    //             }),
+    //         ],
+    //     }
+    // )
+    // .copyDirectory(`${PATHS.node}/@fortawesome/fontawesome-free/webfonts`, `${PATHS.dist}/fonts`)
+    .copyDirectory(`${PATHS.src}/images`, `${PATHS.dist}/img`)
+    // .copy(`${PATHS.src}/fonts/*`, `${PATHS.dist}/fonts`)
+    // .copy(`${PATHS.node}/swiper/dist/js/swiper.js`, `${PATHS.dist}/js`)
+    .js(`${PATHS.src}/scripts/app.js`, `${PATHS.dist}/js/`)
+    // .js(`${PATHS.src}/scripts/a11y.js`, `${PATHS.dist}/js/`)
+    .sass(`${PATHS.src}/styles/app.scss`, 'css')
+    .options({
+        processCssUrls: false
+    })
+    .setPublicPath(`${PATHS.dist}`);
 
-mix.setPublicPath('wp-content/themes/onemohrtime/assets') // generate manifest in this directory
-
-  // JavaScript ES6
-  .js('wp-content/themes/onemohrtime/src/scripts/app.js', 'js')
-  // .extract([
-  //   'fancybox',
-  //   'jquery',
-  // ])
-
-  // SCSS to CSS
-  .sass('wp-content/themes/onemohrtime/src/styles/app.scss', 'css')
-  // .sourceMaps();
-
-  // Process images + media
-  .copyDirectory('wp-content/themes/onemohrtime/src/images', 'wp-content/themes/onemohrtime/assets/img')
-
-  // Live reload browser
-  .browserSync({
-    watch: true,
-    // proxy: process.env.SITE_URL,
-    proxy: 'https://onemohrti.ddev.site',
-    // files: [
-    //   '{*,**/*}.css',
-    //   '{*,**/*}.js',
-    //   '{*,**/*}.twig'
-    // ],
-    files: [
-      'assets/scripts/*.js',
-      'src/scripts/*.js',
-      'src/scripts/**/*.js',
-      'assets/styles/*.css',
-      'src/styles/*.scss',
-      'src/styles/**/*.scss',
-      'templates/*.twig',
-      'templates/**/*.twig'
-    ]
-  })
-
-  // Additional config
-  .minify([
-    'wp-content/themes/onemohrtime/assets/js/app.js',
-    'wp-content/themes/onemohrtime/assets/css/app.css'
-  ]) // create sibling *.min file
-  // .disableSuccessNotifications()
-  // .version()
-  .options({
-    // autoprefixer: {
-    //   options: {
-    //     grid: "autoplace"
-    //   }
-    // },
-    // postCss: [
-    //   require('autoprefixer')
-    // ],
-    processCssUrls: false,
-  })
-;
+mix.browserSync({
+    proxy: `${PATHS.proxy}`,
+    port: 3000,
+    injectChanges: true,
+    open: false,
+    files: [`${PATHS.dist}/*.*`],
+    logLevel: "debug"
+});
