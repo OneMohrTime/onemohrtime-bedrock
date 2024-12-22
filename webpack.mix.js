@@ -1,19 +1,36 @@
 let mix = require('laravel-mix');
 
-require('laravel-mix-imagemin');
+// require('laravel-mix-imagemin');
 
 let PATHS = {
     node: './node_modules',
-    src: './wp-content/themes/onemohrtime/src',
-    dist: './wp-content/themes/onemohrtime/assets',
+    src: './wp-content/themes/onemohrtime-4.0.0/src',
+    dist: './wp-content/themes/onemohrtime-4.0.0/assets',
     proxy: 'https://onemohrti.ddev.site'
 };
+
+// var themename = "website";
+// const themePath = 'wp-content/themes/' + themename + '';
+// const resources = themePath + '/src';
+// mix.setPublicPath(`${themePath}/assets`);
 
 mix.webpackConfig({
     resolve: {
         extensions: ['.js', '.jsx'],
     },
 });
+
+// mix.sass(`${resources}/scss/app.scss`, `${themePath}/assets/css`).sourceMaps();
+// mix.js(`${resources}/js/app.js`, `${themePath}/assets/js`)
+
+// mix.browserSync({
+//     proxy: "https://mywebsite.test",
+//     files: [
+//         `${themePath}/**/*.php`,
+//         `${themePath}/**/*.js`,
+//         `${themePath}/**/*.css`,
+//     ]
+// });
 
 /*
  |--------------------------------------------------------------------------
