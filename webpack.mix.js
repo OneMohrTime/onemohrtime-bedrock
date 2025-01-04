@@ -4,8 +4,8 @@ let mix = require('laravel-mix');
 
 let PATHS = {
     node: './node_modules',
-    src: './wp-content/themes/onemohrtime-4.0.0/src',
-    dist: './wp-content/themes/onemohrtime-4.0.0/assets',
+    src: './wp-content/themes/onemohrtime/src',
+    dist: './wp-content/themes/onemohrtime/assets',
     proxy: 'https://onemohrti.ddev.site'
 };
 
