@@ -9,14 +9,11 @@
   },
   "main": "index.php",
   "scripts": {
-    "dev": "npm run development",
-    "development": "npx mix",
-    "watch": "npx mix watch",
-    "watch-poll": "npx mix watch -- --watch-options-poll=1000",
-    "hot": "npx mix watch --hot",
-    "build": "npm run production",
+    "dev": "vite",
+    "watch": "vite build --watch",
+    "production": "vite build",
     "prod": "npm run production",
-    "production": "npx mix --production"
+    "build": "npm run production"
   },
   "browserslist": [
     "last 5 versions",
@@ -32,23 +29,20 @@
   },
   "license": "MIT",
   "engines": {
-    "node": "20"
+    "node": "24"
   },
   "devDependencies": {
-    "browser-sync": "^3.0.2",
-    "browser-sync-webpack-plugin": "^2.3.0",
-    "laravel-mix": "^6.0.49",
-    "laravel-mix-imagemin": "^1.0.3",
-    "sass": "^1.77.6",
-    "sass-loader": "^12.6.0"
+    "vite": "^5.1.6",
+    "sass": "^1.77.6"
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.36",
     "@floating-ui/dom": "^1.6.12",
     "bourbon": "^7.3.0",
     "css-reset-and-normalize": "^2.3.6",
+    "custom-cursor.js": "^1.3.9",
     "family.scss": "^1.0.8",
-    "gsap": "^3.12.5",
+    "gsap": "^3.13.0",
     "include-media": "^2.0.0",
     "modujs": "^1.4.2",
     "modularload": "^1.2.8",
