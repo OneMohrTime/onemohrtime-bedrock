@@ -40,6 +40,7 @@
     "@floating-ui/dom": "^1.6.12",
     "bourbon": "^7.3.0",
     "css-reset-and-normalize": "^2.3.6",
+    "custom-cursor.js": "^1.3.9",
     "family.scss": "^1.0.8",
     "gsap": "^3.13.0",
     "include-media": "^2.0.0",
