@@ -32,8 +32,8 @@
     "node": "24"
   },
   "devDependencies": {
-    "vite": "^5.1.6",
-    "sass": "^1.77.6"
+    "sass": "^1.77.6",
+    "vite": "^5.1.6"
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.36",

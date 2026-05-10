@@ -1,9 +1,24 @@
 import { defineConfig } from 'vite';
 import path from 'path';
+import fs from 'fs';
 
 const themeDir = 'wp-content/themes/onemohrtime';
 
+function copyImages() {
+    return {
+        name: 'copy-images',
+        closeBundle() {
+            const src = path.resolve(__dirname, `${themeDir}/src/images`);
+            const dest = path.resolve(__dirname, `${themeDir}/assets/img`);
+            if (fs.existsSync(src)) {
+                fs.cpSync(src, dest, { recursive: true });
+            }
+        },
+    };
+}
+
 export default defineConfig({
+    plugins: [copyImages()],
     build: {
         rollupOptions: {
             input: {
